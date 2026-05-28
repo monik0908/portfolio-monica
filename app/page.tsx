@@ -27,7 +27,7 @@ export default function Home() {
           alt="fotomonica"
           width={100}
           height={100}
-          className="object-cover w-48 h-48 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full" 
+          className="object-cover w-48 h-48 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full"
         />
 
 
@@ -50,13 +50,43 @@ export default function Home() {
           <li><Image src="/images/java.png" alt="JavaScript" width={60} height={60} /> JavaScript</li>
           <li><Image src="/images/html.jpg" alt="HTML/CSS" width={60} height={60} /> HTML/CSS</li>
           <li><Image src="/images/github.png" alt="Git" width={60} height={60} /> Git</li>
-          <li><Image src="/images/tailwind.png" alt="Tailwind CSS" width={60  } height={60} /> Tailwind CSS</li>
+          <li><Image src="/images/tailwind.png" alt="Tailwind CSS" width={60} height={60} /> Tailwind CSS</li>
         </ul><br />
         <br />
         <h1>Projects</h1><br />
-        <ul>
-          <li><a href="https://github.com/monica/portfolio-monica" target="_blank" rel="noopener noreferrer">Portfolio Website</a></li>
-        </ul><br />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex flex-col  border-4 border-solid border-slate-400 p-4 rounded-lg justify-items-center ">
+            <h2 className="text-2xl font-bold mb-2">Project 1: WORKLANG</h2>
+            <div className="relative w-full h-60 md:h-full min-h-50 bg-slate-800 rounded-lg ">
+              <Image
+                src="/images/worklang.png"
+                alt="Captura de la plataforma de idiomas"
+                fill className="object-contain rounded-lg bg-white"
+              />
+            </div>
+            <p className="text-lg mb-4 leading-relaxed text-justify">
+              Plataforma web interactiva para el aprendizaje de inglés técnico y vocabulario laboral especializado, diseñada para ayudar a profesionales a defenderse con éxito en entrevistas y ofertas de empleo.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4 w-full align-items-center">
+              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">React</span>
+              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">Vite</span>
+              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">PHP</span>
+              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">MySQL</span>
+            </div>
+            <a 
+        href="https://github.com/tu-usuario/tu-repositorio" 
+        target="_blank" 
+        className="inline-block text-center bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-2 px-4 rounded-lg transition-colors text-sm"
+      >
+        Ver Código en GitHub
+      </a>
+          </div>
+          <div className="border-4 border-solid border-slate-400 p-4 rounded-lg">
+            <h2 className="text-2xl font-bold mb-2">Project 2: Portfolio Website</h2>
+            <p>Created a personal portfolio website to showcase my projects and skills, utilizing modern design principles and responsive layouts to ensure an optimal viewing experience across devices.</p>
+          </div>
+          <a href="https://github.com/monica/portfolio-monica" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
+        </div><br />
         <h1>Contact me</h1><br />
       </main>
       <footer className="bg-slate-400 text-white p-4 ">
