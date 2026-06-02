@@ -3,49 +3,52 @@ import Image from "next/image";
 export default function Home() {
   return (
 
-    <div className="grid grid-rows-[auto_1fr_auto] h-screen">
-      <header className="bg-slate-900 text-white p-1>">
+    <div className="grid grid-rows-[auto_1fr_auto] h-screen bg-amber-50">
+      <header className="bg-slate-300 text-slate-800 p-4">
         <div className="flex  justify-between items-center max-w-6xl mx-auto">
 
           {/*logo al lado izquierdo*/}
-          <div className="flex items-center gap-4" >
-            <Image src="/images/logo.png" alt="logo" width={90} height={60} className="w-24 h-24" />
-            <span className="font-bold text-4xl uppercase tracking-widest text-slate-100">Monica Patiño</span>
+          <div className="flex items-center gap-2" >
+            <Image src="/images/logo.png" alt="logo" width={120} height={120} className="object-contain w-36 h-12" />
+            <span className="font-bold text-4xl uppercase tracking-widest ">Monica Patiño</span>
           </div>
 
           {/*navegación al lado derecho*/}
-          <nav className="flex gap-9">
-            <a href="#about" className=" text-slate-300  hover:text-cyan-400 transition-colors border-4  m-2 p-2">About me</a>
-            <a href="#projects" className="text-slate-300  hover:text-cyan-400 transition-colors  border-4 m-2 p-2">Projects</a>
-            <a href="#contact" className="text-slate-300 hover:text-cyan-400 transition-colors border-4 m-2 p-2">Contact</a>
+          <nav className="flex items-center text-3xl gap-16 px-7 ">
+            <a href="#about" className="  hover:text-fuchsia-500 hover:text-4xl    transition-colors  py-1">About me</a>
+            <a href="#projects" className= " hover:text-fuchsia-500 hover:text-4xl transition-colors  py-1">Projects</a>
+            <a href="#contact" className="  hover:text-fuchsia-500 hover:text-4xl  transition-colors py-1">Contact</a>
           </nav>
         </div>
       </header>
       <main className="overflow-y-auto P-1 MX-auto m-6 ">
         <div className="flex flex-row justify-between gap-6 max-w-4xl mx-auto">
-        <Image
-          src="/images/fotomonica.jpeg"
-          alt="fotomonica"
-          width={100}
-          height={100}
-          className="object-cover w-48 h-48 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full"
-        />
+          <Image
+            src="/images/fotomonica.jpeg"
+            alt="fotomonica"
+            width={100}
+            height={100}
+            className="object-cover w-64 h-64 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full"
+          />
+          <div>
+            <h1>Hello, I`m Mónica!</h1><br />
+            <p className="text-2xl tracking-wide leading-relaxed text-4xl text-justify">I am a Web developer focused on creating modern solutions for small businesses. With a passion for technology and a knack for problem-solving, I specialize in building responsive and user-friendly websites that help businesses establish a strong online presence.</p><br />
 
-      <div>
-        <h1>Hello, I`m Mónica!</h1><br />
-        <p className="text-2xl tracking-wide leading-relaxed text-justify">I am a Web developer focused on creating modern solutions for small businesses. With a passion for technology and a knack for problem-solving, I specialize in building responsive and user-friendly websites that help businesses establish a strong online presence.</p><br />
-        
+          </div>
         </div>
+        <hr className="my-8 border-slate-400" />
+        <div id="about" className="flex flex-row gap-20 m-4 bg-amber-100">
+          <div>
+          <h1>About me </h1><br />
+          <p className="text-2xl tracking-wide leading-relaxed text-4xl text-justify ">
+            Web developer with a background in Web Application Development (Advanced Vocational Training in Spain) and professional experience in accounting and administration.
+
+            I combine technical knowledge with business acumen to create modern, functional web solutions designed to address real-world needs. I currently work with technologies such as React, Next.js, and digital tools focused on improving processes and user experiences.
+
+            I am particularly interested in developing web projects for small businesses, automation, and AI-powered solutions. I am passionate about learning and continuously improving my skills to create innovative and effective web applications.</p>
+          </div>
+          <Image src="/images/aboutme.jpg" alt="aboutme" width={640} height={480} className="object-contain w-auto h-auto mx-auto mb-6  " />
         </div>
-        <h1>About me </h1><br />
-        <p className="text-2xl tracking-wide leading-relaxed text-justify">
-          Web developer with a background in Web Application Development (Advanced Vocational Training in Spain) and professional experience in accounting and administration.
-
-          I combine technical knowledge with business acumen to create modern, functional web solutions designed to address real-world needs. I currently work with technologies such as React, Next.js, and digital tools focused on improving processes and user experiences.
-
-          I am particularly interested in developing web projects for small businesses, automation, and AI-powered solutions. I am passionate about learning and continuously improving my skills to create innovative and effective web applications.</p>
-        <br />
-
         <h1>Tecnologies</h1><br />
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
           <li><Image src="/images/react.png" alt="React" width={60} height={60} /> React</li>
@@ -99,18 +102,18 @@ export default function Home() {
       </main>
       <footer className="bg-slate-900 text-white p-4 align-items-center text-center">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-    
-    {/* Izquierda: Copyright */}
-    <div>
-      © {new Date().getFullYear()} Monica Patiño. Todos los derechos reservados.
-    </div>
 
-    {/* Derecha: Créditos de tecnología */}
-    <div className="text-slate-500 text-md font-mono">
-      Construido con <span className="text-cyan-400">React</span> & <span className="text-cyan-400">Next.js</span>
-    </div>
+          {/* Izquierda: Copyright */}
+          <div>
+            © {new Date().getFullYear()} Monica Patiño. Todos los derechos reservados.
+          </div>
 
-  </div>
+          {/* Derecha: Créditos de tecnología */}
+          <div className="text-slate-500 text-md font-mono">
+            Construido con <span className="text-cyan-400">React</span> & <span className="text-cyan-400">Next.js</span>
+          </div>
+
+        </div>
       </footer>
     </div>
 

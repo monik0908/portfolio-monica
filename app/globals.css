@@ -2,7 +2,7 @@
 
 /**colores principales en la web**/
 :root {
-  --background: #90bee9;
+  --background: rgb(248, 250, 252);
   --foreground: #080439;
 }
 
@@ -31,11 +31,13 @@ body {
   
 }
 h1 {
-  font-size: 32px;
+
   font-weight: bold;
   background-color: rgb(148, 163, 184);
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 32px;
   
 }
+
