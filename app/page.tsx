@@ -24,7 +24,7 @@ export default function Home() {
       <main className="overflow-y-auto P-1 MX-auto m-6 ">
 
         {/* contenido principal *************************************************************************** */}
-        
+
         <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
           <Image
             src="/images/fotomonica.jpeg"
