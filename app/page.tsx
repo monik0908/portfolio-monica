@@ -14,43 +14,46 @@ export default function Home() {
           </div>
 
           {/*navegación al lado derecho*/}
-          <nav className="flex items-center text-3xl gap-16 px-7 ">
-            <a href="#about" className="  hover:text-fuchsia-500 hover:text-4xl    transition-colors  py-1">About me</a>
-            <a href="#projects" className= " hover:text-fuchsia-500 hover:text-4xl transition-colors  py-1">Projects</a>
-            <a href="#contact" className="  hover:text-fuchsia-500 hover:text-4xl  transition-colors py-1">Contact</a>
+          <nav className="flex items-center text-xl gap-16 px-7 ">
+            <a href="#about" className="  hover:text-fuchsia-500 hover:text-2xl    transition-colors  py-1">About me</a>
+            <a href="#projects" className=" hover:text-fuchsia-500 hover:text-2xl transition-colors  py-1">Projects</a>
+            <a href="#contact" className="  hover:text-fuchsia-500 hover:text-2xl  transition-colors py-1">Contact</a>
           </nav>
-        </div>
+        </div> 
       </header>
       <main className="overflow-y-auto P-1 MX-auto m-6 ">
-        <div className="flex flex-row justify-between gap-6 max-w-4xl mx-auto">
+
+        {/* contenido principal *************************************************************************** */}
+        
+        <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
           <Image
             src="/images/fotomonica.jpeg"
             alt="fotomonica"
             width={100}
             height={100}
-            className="object-cover w-64 h-64 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full"
+            className="object-cover w-72 h-72 mx-auto mb-6 border-4 border-solid border-slate-400 rounded-full"
           />
           <div>
-            <h1>Hello, I`m Mónica!</h1><br />
-            <p className="text-2xl tracking-wide leading-relaxed text-4xl text-justify">I am a Web developer focused on creating modern solutions for small businesses. With a passion for technology and a knack for problem-solving, I specialize in building responsive and user-friendly websites that help businesses establish a strong online presence.</p><br />
-
+            <h1 className="text-5xl font-bold mb-4">Hello, I´m Mónica!</h1><br />
+            <p className="text-lg leading-relaxed text-slate-700">I am a Web developer focused on creating modern solutions for small businesses. With a passion for technology and a knack for problem-solving, I specialize in building responsive and user-friendly websites that help businesses establish a strong online presence.</p>
           </div>
         </div>
         <hr className="my-8 border-slate-400" />
-        <div id="about" className="flex flex-row gap-20 m-4 bg-amber-100">
+        <div id="about" className="flex p-4 gap-4 items-center bg-amber-100 ">
           <div>
-          <h1>About me </h1><br />
-          <p className="text-2xl tracking-wide leading-relaxed text-4xl text-justify ">
-            Web developer with a background in Web Application Development (Advanced Vocational Training in Spain) and professional experience in accounting and administration.
+            <h1>About me </h1><br />
+            <p className="text-xl tracking-wide leading-relaxed  text-justify ">
+              Web developer with a background in Web Application Development (Advanced Vocational Training in Spain) and professional experience in accounting and administration.
 
-            I combine technical knowledge with business acumen to create modern, functional web solutions designed to address real-world needs. I currently work with technologies such as React, Next.js, and digital tools focused on improving processes and user experiences.
+              I combine technical knowledge with business acumen to create modern, functional web solutions designed to address real- ld needs. I currently work with technologies such as React, Next.js, and digital tools focused on improving processes and user experiences.
 
-            I am particularly interested in developing web projects for small businesses, automation, and AI-powered solutions. I am passionate about learning and continuously improving my skills to create innovative and effective web applications.</p>
+              I am particularly interested in developing web projects for small businesses, automation, and AI-powered solutions. I am passionate about learning and continuously improving my skills to create innovative and effective web applications.</p>
           </div>
           <Image src="/images/aboutme.jpg" alt="aboutme" width={640} height={480} className="object-contain w-auto h-auto mx-auto mb-6  " />
         </div>
-        <h1>Tecnologies</h1><br />
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+         <hr className="my-8 border-slate-400" />
+        <h1 className="text-3xl font-bold p-4">Tecnologies</h1>
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center  bg-blend-lighten bg-blue-100">
           <li><Image src="/images/react.png" alt="React" width={60} height={60} /> React</li>
           <li><Image src="/images/nextjs.jpg" alt="Next.js" width={60} height={60} /> Next.js</li>
           <li><Image src="/images/java.png" alt="JavaScript" width={60} height={60} /> JavaScript</li>
@@ -59,8 +62,8 @@ export default function Home() {
           <li><Image src="/images/tailwind.png" alt="Tailwind CSS" width={60} height={60} /> Tailwind CSS</li>
         </ul><br />
         <br />
-        <h1>Projects</h1><br />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h1 id="projects">Projects</h1><br />
+        <div  className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col  border-4 border-solid border-slate-400 p-4 rounded-lg justify-items-center ">
             <h2 className="text-2xl font-bold mb-2">Project 1: WORKLANG</h2>
             <div className="relative w-full h-60 md:h-full min-h-50 bg-slate-800 rounded-lg ">
@@ -93,15 +96,15 @@ export default function Home() {
           </div>
 
         </div><br />
-        <h1>Contact me</h1><br />
-        <ul className="list-disc list-inside mb-4">
-          <li className="flex  text-2xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/email.jpg" alt="Email" width={40} height={40} className="mr-2" />Email:   <a href="mailto:monica@hotmail.com">monica@hotmail.com</a></li>
-          <li className="flex text-2xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/in.png" alt="LinkedIn" width={40} height={40} className="mr-2" /> LinkedIn:   <a href="https://www.linkedin.com/in/mónica-patiño-64672b200" target="_blank" rel="noopener noreferrer">linkedin.com/in/monica-patino</a></li>
-          <li className="flex text-2xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3 "><Image src="/images/github.png" alt="GitHub" width={40} height={40} className="mr-2" />GitHub:   <a href="https://github.com/monik0908" target="_blank" rel="noopener noreferrer">github.com/monica</a></li>
+        <h1 id="contact">Contact me</h1>
+        <ul className="list-disc list-inside mb-1  bg-amber-100">
+          <li className="flex  text-xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/email.jpg" alt="Email" width={40} height={40} className="mr-2" />Email:   <a href="mailto:monica@hotmail.com">monica@hotmail.com</a></li>
+          <li className="flex text-xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/in.png" alt="LinkedIn" width={40} height={40} className="mr-2" /> LinkedIn:   <a href="https://www.linkedin.com/in/mónica-patiño-64672b200" target="_blank" rel="noopener noreferrer">linkedin.com/in/monica-patino</a></li>
+          <li className="flex text-xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3 "><Image src="/images/github.png" alt="GitHub" width={40} height={40} className="mr-2" />GitHub:   <a href="https://github.com/monik0908" target="_blank" rel="noopener noreferrer">github.com/monica</a></li>
         </ul>
       </main>
       <footer className="bg-slate-900 text-white p-4 align-items-center text-center">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <div className="max-w-6xl mx-auto px-3 flex flex-col md:flex-row justify-between items-center gap-2 text-sm">
 
           {/* Izquierda: Copyright */}
           <div>
