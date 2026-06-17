@@ -1,4 +1,6 @@
 import Image from "next/image";
+import SectionTitle from "../components/SectionTitle";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
             <a href="#projects" className=" hover:text-fuchsia-500 hover:text-2xl transition-colors  py-1">Projects</a>
             <a href="#contact" className="  hover:text-fuchsia-500 hover:text-2xl  transition-colors py-1">Contact</a>
           </nav>
-        </div> 
+        </div>
       </header>
       <main className="overflow-y-auto P-1 MX-auto m-6 ">
 
@@ -41,7 +43,7 @@ export default function Home() {
         <hr className="my-8 border-slate-400" />
         <div id="about" className="flex p-4 gap-4 items-center bg-amber-100 ">
           <div>
-            <h1>About me </h1><br />
+            <SectionTitle title="About me" />
             <p className="text-xl tracking-wide leading-relaxed  text-justify ">
               Web developer with a background in Web Application Development (Advanced Vocational Training in Spain) and professional experience in accounting and administration.
 
@@ -51,8 +53,8 @@ export default function Home() {
           </div>
           <Image src="/images/aboutme.jpg" alt="aboutme" width={640} height={480} className="object-contain w-auto h-auto mx-auto mb-6  " />
         </div>
-         <hr className="my-8 border-slate-400" />
-        <h1 className="text-3xl font-bold p-4">Tecnologies</h1>
+        <hr className="my-8 border-slate-400" />
+        <SectionTitle title="Tecnologies" />
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center  bg-blend-lighten bg-blue-100">
           <li><Image src="/images/react.png" alt="React" width={60} height={60} /> React</li>
           <li><Image src="/images/nextjs.jpg" alt="Next.js" width={60} height={60} /> Next.js</li>
@@ -62,41 +64,25 @@ export default function Home() {
           <li><Image src="/images/tailwind.png" alt="Tailwind CSS" width={60} height={60} /> Tailwind CSS</li>
         </ul><br />
         <br />
-        <h1 id="projects">Projects</h1><br />
-        <div  className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col  border-4 border-solid border-slate-400 p-4 rounded-lg justify-items-center ">
-            <h2 className="text-2xl font-bold mb-2">Project 1: WORKLANG</h2>
-            <div className="relative w-full h-60 md:h-full min-h-50 bg-slate-800 rounded-lg ">
-              <Image
-                src="/images/worklang.png"
-                alt="Captura de la plataforma de idiomas"
-                fill className="object-contain rounded-lg bg-white"
-              />
-            </div>
-            <p className="text-lg mb-4 leading-relaxed text-justify">
-              Interactive web platform for learning technical English and specialized work vocabulary, designed to help professionals successfully defend themselves in interviews and job offers.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4 w-full align-items-center justify-center">
-              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">React</span>
-              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">Vite</span>
-              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">PHP</span>
-              <span className="bg-slate-800 text-cyan-400 text-sm px-2.5 py-1 rounded-md font-mono">MySQL</span>
-            </div>
-            <a
-              href="https://github.com/monik0908/worklang.git"
-              target="_blank"
-              className="inline-block text-center bg-slate-400 hover:bg-cyan-600 text-slate-950 font-bold py-2 px-4 rounded-lg transition-colors text-sm"
-            >
-              Ver Código en GitHub
-            </a>
-          </div>
+        <SectionTitle title="Projects" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <ProjectCard
+            title="WORKLANG"
+            image="/images/worklang.png"
+            description="Interactive web platform for learning technical English and specialized work vocabulary, designed to help professionals successfully defend themselves in interviews and job offers."
+            technologies={['React', 'Vite', 'PHP', 'MySQL']}
+            githubUrl="https://github.com/monik0908/worklang.git"
+            demoUrl="https://worklang.com"
+          />
+
           <div className="border-4 border-solid border-slate-400 p-4 rounded-lg">
             <h2 className="text-2xl font-bold mb-2">Project 2: Portfolio Website</h2>
             <p>Created a personal portfolio website to showcase my projects and skills, utilizing modern design principles and responsive layouts to ensure an optimal viewing experience across devices.</p>
           </div>
 
         </div><br />
-        <h1 id="contact">Contact me</h1>
+        <SectionTitle title="Contact" />
         <ul className="list-disc list-inside mb-1  bg-amber-100">
           <li className="flex  text-xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/email.jpg" alt="Email" width={40} height={40} className="mr-2" />Email:   <a href="mailto:monica@hotmail.com">monica@hotmail.com</a></li>
           <li className="flex text-xl tracking-wide leading-relaxed  hover:text-cyan-700 transition-colors text-justify p-3"><Image src="/images/in.png" alt="LinkedIn" width={40} height={40} className="mr-2" /> LinkedIn:   <a href="https://www.linkedin.com/in/mónica-patiño-64672b200" target="_blank" rel="noopener noreferrer">linkedin.com/in/monica-patino</a></li>
